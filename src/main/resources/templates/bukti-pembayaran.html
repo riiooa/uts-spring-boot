@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:insert="fragments/header.html"/>
+    <body>
+        <div class="container" style="max-width: 1530px;">
+            <div class="pt-5 h-100">
+                    <div class="row justify-content align-items h-100">
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <address>
+                                        <strong><span th:text="${pembelian.NamaPembeli}"></strong>
+                                        <br>
+                                        
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="text-center pb-5">
+                                    <h1>Bukti Pembayaran</h1>
+                                </div>
+                                </span>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Kode Pesanan</th>
+                                            <th>Nama Pesanan</th>
+                                            <th>Jumlah Beli</th>
+                                            <th class="text-center">Harga</th>
+                                            <th class="text-center">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-9"><em><span th:text="${pembelian.KodePesanan}"></span></em></h4></td>
+                                            <td class="col-md-1" style="text-align: center"><span th:text="${pembelian.NamaPesanan}"></span></td>
+                                            <td class="col-md-1 text-center"><span th:text="${pembelian.JumlahBeli}"></span></td>
+                                            <td class="col-md-1 text-center"><span th:text="${pembelian.Harga}"></td>
+                                                <td class="col-md-1 text-center"><span th:text="${pembelian.Total}"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>   </td>
+                                            <td>   </td>
+                                            <td>   </td>
+                                            
+                                            <td class="text-right">
+                                            <p>
+                                                <strong>Potongan</strong>
+                                            </p>
+                                            <p>
+                                                <strong>Bayar: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Kembali: </strong>
+                                            </p>
+                                        </td>
+                                            <td class="text-center">
+                                            <p>
+                                                <strong><span th:text="${pembelian.Potongan}"></strong>
+                                            </p>
+                                            <p>
+                                                <strong><span th:text="${pembelian.UangBayar}"></strong>
+                                            </p>
+                                            <p>
+                                                <strong><span th:text="${pembelian.UangKembali}"></strong>
+                                            </p>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>   </td>
+                                            <td>   </td>
+                                            <td>   </td>
+                                            <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                                            <td class="text-center text-danger"><h4><strong><span th:text="${pembelian.TotalKeseluruhan}"></strong></h4></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

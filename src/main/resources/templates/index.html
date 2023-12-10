@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:insert="fragments/header.html"/>
+    <body>
+        <div class="container" style="max-width: 1530px;">
+            <div class="pt-5 text-center h-100">
+                <h1>
+                    MUHAMMAD HARIS
+                </h1>
+            </div>
+            <section>
+                <div class="pt-5 h-100">
+                    <div class="row justify-content align-items h-100">
+                        <div class="col-7"> 
+                            <div class="card shadow-2-strong card-registration">
+                                <div class="card-body p-4 p-md-5" style="border-top-color: #00BCD4 !important; border-bottom-color: #00BCD4 !important; border-top: 2px solid; border-bottom: 2px solid;">
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-5">Menu</h5>
+                                    <ol class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Kacang Hijau Bollen</div>
+                                            TAKA-1
+                                          </div>
+                                          <span class="badge bg-primary rounded-pill">Rp. 40.000</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Apel Bollen</div>
+                                            TAKA-2
+                                          </div>
+                                          <span class="badge bg-primary rounded-pill">Rp. 50.000</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Peyeum Keju Bollen</div>
+                                            TAKA-3
+                                          </div>
+                                          <span class="badge bg-primary rounded-pill">Rp. 60.000</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                              <div class="fw-bold">Durian Keju Bollen</div>
+                                              TAKA-4
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">Rp. 70.000</span>
+                                          </li>
+                                      </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card shadow-2-strong card-registration">
+                                <div class="card-body p-4 p-md-5" style="border-top-color: #00BCD4 !important; border-bottom-color: #00BCD4 !important; border-top: 2px solid; border-bottom: 2px solid;">
+                                    <h5 class="mb-4 pb-2 pb-md-0 mb-md-5">Pembayaran</h5>
+                                    <form method="post" th:action="@{/bukti-pembayaran}" th:object="${pembelian}">
+                                        <div class="row form-group">
+                                            <div class="col-md-12 mb-4 ">
+                                                <div class="form-outline d-flex">
+                                                    <label class="col-md-3 form-label" for="name">Nama Pembeli</label>
+                                                    <input type="text" th:field="*{NamaPembeli}"
+                                                        class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-md-12 mb-4">
+                                                <div class="form-outline d-flex">
+                                                    <label class="col-md-3 form-label" for="code">Kode Pesanan</label>
+                                                    <input type="text" th:field="*{KodePesanan}" class=" form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-md-12 mb-4 d-flex align-items-center">
+                                                <div class="form-outline datepicker d-flex w-100">
+                                                    <label for="qty" class="col-md-3 form-label">Jumlah Beli</label>
+                                                    <input type="text" class="form-control"
+                                                    th:field="*{JumlahBeli}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-md-12 mb-4 d-flex align-items-center">
+                                                <div class="form-outline datepicker d-flex w-100">
+                                                    <label for="qty" class="col-md-3 form-label">Uang Bayar</label>
+                                                    <input type="text" class="form-control"
+                                                    th:field="*{UangBayar}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4 pt-2">
+                                            <input class="btn btn-primary" type="submit" value="Bayar" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        
+    </body>
+</html>
